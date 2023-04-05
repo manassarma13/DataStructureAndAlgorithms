@@ -1,13 +1,11 @@
 package com.bst;
  
-
 public class BST {
      public Node root;
      
      public BST() {
     	 root = null;
      }
-     
      /*
       * Build Tree
       */
@@ -17,41 +15,21 @@ public class BST {
 			root = new Node(value, null, null);
 			return;
 		}
-		
 		if( value > rootClone.value) {
 			
 			if( rootClone.rightNode  == null) {
 				rootClone.rightNode = new Node(value, null, null);
-			}else {
+			} else {
 				add(value, rootClone.rightNode);
 			}
 		}
-		
 		if( value < rootClone.value) {
 			
 			if( rootClone.leftNode  == null) {
 				rootClone.leftNode = new Node(value, null, null);
-			}else {
+			} else {
 				add(value, rootClone.leftNode);
 			}
-		}
-		
-		
+		}	
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }
